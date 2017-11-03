@@ -45,7 +45,7 @@ is build out of the Dockerfile given in this directory.
 ## Other resources.
 
 There is a
-[`Dockerfile`][https://bitbucket.org/piyush-kurur/compilers/Dockerfile]
+[`Dockerfile`]
 in this repository which gives the latest ubuntu with all the
 necessary tools for this course. It is also use by our shippable
 builds. Images are available at dockerhub under the url
@@ -58,3 +58,4 @@ builds. Images are available at dockerhub under the url
 [Course Wiki]:       <https://bitbucket.org/piyush-kurur/compilers/wiki/Home>
 [Issue tracker]:     <https://bitbucket.org/piyush-kurur/compilers/issues>
 [shippable]: <https://app.shippable.com/bitbucket/piyush-kurur/compilers/> "Shippable CI page"
+[`dockerfile`]: <https://bitbucket.org/piyush-kurur/compilers/src/master/Dockerfile>
