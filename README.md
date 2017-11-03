@@ -44,12 +44,10 @@ is build out of the Dockerfile given in this directory.
 
 ## Other resources.
 
-There is a
-[`Dockerfile`]
-in this repository which gives the latest ubuntu with all the
-necessary tools for this course. It is also use by our shippable
-builds. Images are available at dockerhub under the url
-<https://hub.docker.com/r/piyushkurur/compilers/>
+There is a [`Dockerfile`][dockerfile] in this repository which gives
+the latest ubuntu with all the necessary tools for this course. It is
+also use by our shippable builds. Images are available at dockerhub
+under the url <https://hub.docker.com/r/piyushkurur/compilers/>
 
 
 
@@ -58,4 +56,4 @@ builds. Images are available at dockerhub under the url
 [Course Wiki]:       <https://bitbucket.org/piyush-kurur/compilers/wiki/Home>
 [Issue tracker]:     <https://bitbucket.org/piyush-kurur/compilers/issues>
 [shippable]: <https://app.shippable.com/bitbucket/piyush-kurur/compilers/> "Shippable CI page"
-[`dockerfile`]: <https://bitbucket.org/piyush-kurur/compilers/src/master/Dockerfile>
+[dockerfile]: <https://bitbucket.org/piyush-kurur/compilers/src/master/Dockerfile>
