@@ -30,7 +30,7 @@ need type variables to capture polymorphic types. In ML when we say
 that an expression has type `'a -> 'b -> 'a` what we mean is that `'a`
 and `'b` can take any possible types. In our setting, we would like to
 make it more precise and quantify. We do this by having two kinds of
-types, _mono-types_ (usually denoted by `\tau` with appropriate
+types, _mono-types_ (usually denoted by `τ` with appropriate
 suffixes) and _type schemes_. These are given by the abstract syntax.
 
 ```
@@ -154,7 +154,7 @@ step process.
 1. Perform the substitutes `[α₁/τ₁][α₂/τ₂]...` in `τ` to obtain `τ'`.
 
 2. Quantify over the variables `β₁,β₂...` which are not in the
-   original type `\tau`.
+   original type `τ`.
 
 In such a case we denote that `σ' ≤ σ`
 
@@ -185,7 +185,7 @@ __Exercise:__
 variable `α` such that `α/t` is an entry in  `𝒮`.
 
 We can define a notion of generality on unifier as by making use of
-the pre-ordering defined as follows `τ \leq τ'` if there is a
+the pre-ordering defined as follows `τ ≤ τ'` if there is a
 telescoping substitution `𝒮` such that `τ'[𝒮] = τ`.
 
 __Unification Problem__
@@ -251,7 +251,7 @@ The essence of the type inference algorithm is the following
 
 1. If `e` is a variable `x` then it better be the case that `Γ` has a
    type assumption `x : σ`. In this case instantiate all the quatified
-   variables of `\sigma` with fresh variables (i.e. variables that are
+   variables of `σ` with fresh variables (i.e. variables that are
    not used any where else) to get a mono-type `τ` and return it. The
    returned substitution is the same as the input one.
 
