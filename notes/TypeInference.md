@@ -101,8 +101,8 @@ rules for generalisation and specialisation.
 		------------------------
 		Γ ⊢ e : ∀ α . σ
 
-	The variable `α` should not be free in any of the types that occur
-    in the context Γ is crucial requirement.
+	That the variable `α` should not be free in any of the types that
+    occur in the context Γ is crucial requirement.
 
 5. The specialisation rule __SPEC__
 
