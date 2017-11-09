@@ -2,12 +2,13 @@
 
 Languages like ML and Haskell infer the type of the expressions from
 the context. We give a quick overview of this algorithm. The type
-inference problem is given an expression with no type annotations, we
-want to infer the type of the expression. If given the expression $e =
-fun x => x$, the type `int -> int` is a valid type for it and so is
-`char -> char`. The ML compiler is smart enough to infer that this
-expression the polymorphic type `'a -> 'a`. In other words, the
-inference algorithm should infer the *most general possible type*.
+inference problem is the following: given an expression with no type
+annotations, we want to infer the type of the expression from the way
+the different variables are used. If given the expression `e = fun x
+=> x`, the type `int -> int` is a valid type for it and so is `char ->
+char`. The ML compiler is smart enough to infer that this expression
+the polymorphic type `'a -> 'a`. In other words, the inference
+algorithm should infer the *most general possible type*.
 
 ## The Language
 
@@ -116,7 +117,7 @@ __Exercise:__
 :  What is the inference rule for the constant `true`.
 
 
-A *type derivation* is a list of judgements of the kind $Γ |- e : σ$
+A *type derivation* is a list of judgements of the kind `Γ ⊢ e : σ`
 where each statement is either a variable rule or is derived from a
 previous rule using one of the above inference rules. Here is the
 example for the identity function `fun x => x`.
@@ -129,7 +130,7 @@ example for the identity function `fun x => x`.
 
 We say that the expression `e` has type `σ` under the assumptions `Γ`
 if there is a *type derivation* whose last statement is the judgement
-`Γ ⊢ e : σ`. It is possible that some expression $e$ is not well
+`Γ ⊢ e : σ`. It is possible that some expression `e` is not well
 typed, in which case it is impossible to find any *type derivation*
 whose conclusion is `Γ ⊢ e : σ` for any `σ`. In such cases we say that
 `e` is *not typeable*.
@@ -182,8 +183,6 @@ __Exercise:__
 :   Let `𝒮` be a telescope and let `τ` be any type then the result
 `τ[𝒮]` of the substitution of `𝒮` in `τ` *does not* contain any type
 variable `α` such that `α/t` is an entry in  `𝒮`.
-
-
 
 We can define a notion of generality on unifier as by making use of
 the pre-ordering defined as follows `τ \leq τ'` if there is a
