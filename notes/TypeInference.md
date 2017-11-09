@@ -30,7 +30,7 @@ need type variables to capture polymorphic types. In ML when we say
 that an expression has type `'a -> 'b -> 'a` what we mean is that `'a`
 and `'b` can take any possible types. In our setting, we would like to
 make it more precise and quantify. We do this by having two kinds of
-types, _mono-types_ (usually denoted by $\tau$ with appropriate
+types, _mono-types_ (usually denoted by `\tau` with appropriate
 suffixes) and _type schemes_. These are given by the abstract syntax.
 
 ```
@@ -44,21 +44,21 @@ suffixes) and _type schemes_. These are given by the abstract syntax.
 ```
 
 The important thing is that all quantification is at the outer most
-layer. For example the type `(∀α α) -> (∀ β . β)$` is *not* a valid
+layer. For example the type `(∀α α) -> (∀ β . β)` is *not* a valid
 type scheme. In the above language of mono-types and type schemes, the
 type of the id function in ML `'a -> 'a` is actually the type scheme
-$∀α (α -> α)$ where as the type $α -> α$ should be read as the
+`∀α (α -> α)` where as the type `α -> α` should be read as the
 mono-type of a function form some fixed (but yet to be decided
 monotype `α`) to the same type `α`.
 
 ## Type inference rules.
 
 
-To decide whether the judgement $e : σ$ we need to know what are the
-types of the *free variables* in $e$. A type context $Γ$ is list of
+To decide whether the judgement `e : σ` we need to know what are the
+types of the *free variables* in `e`. A type context `Γ` is list of
 assumptions on variables, i.e. it is a list of assumptions of the kind
-$x₁ : σ₁, x₂ : σ₂$ etc. We use $Γ ⊢ e : σ$ to denote that under the
-context $Γ$, $e$ can be derived the type $σ$. The rules of inference
+`x₁ : σ₁, x₂ : σ₂` etc. We use `Γ ⊢ e : σ` to denote that under the
+context `Γ`, `e` can be derived the type `σ`. The rules of inference
 is defined as a set of preconditions together with a conclusion.
 
 1. The variable rule __VAR__
