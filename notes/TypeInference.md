@@ -262,3 +262,10 @@ The essence of the type inference algorithm is the following
    gives the new substitution `𝒮`.
 
 3. If `e` is `fun x => e'`. Exercise.
+
+# References
+
+[Principal type-schemes for functional programs][principal], Luis
+Damas and Robin Milner.
+
+[principal]: <http://web.cs.wpi.edu/~cs4536/c12/milner-damas_principal_types.pdf>
