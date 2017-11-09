@@ -1,13 +1,3 @@
----
-title: The type inference problem
-header-includes:
-    - \usepackage{amssymb}
-	- \usepackage{amsmath}
-    - \usepackage[mathletters]{ucs}
-	- '\newcommand{\fun}[2]{\ensuremath{\mathbf{fun}\ #1 \Rightarrow #2}}'
-
----
-
 # The type inference problem.
 
 Languages like ML and Haskell infer the type of the expressions from
