@@ -170,7 +170,7 @@ __Exercise:__
 The inference algorithm makes use of type variables and in the process
 generates constraints that says `τ₁ ≡ τ₁', τ₂ ≡ τ₂' ...`. A solution
 to such a set of constraints is a *list* of substitutions `𝒮 = α₁/t₁,
-α₂/t₂ ...` such that:
+α₂/t₂ ...` such that it:
 
 1. Should have the *telescoping* property, i.e.  the variables of `tᵢ`
    should only be from the set `αᵢ₊₁ …`.
