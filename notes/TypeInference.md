@@ -170,16 +170,23 @@ __Exercise:__
 The inference algorithm makes use of type variables and in the process
 generates constraints that says `τ₁ ≡ τ₁', τ₂ ≡ τ₂' ...`. A solution
 to such a set of constraints is a *list* of substitutions `𝒮 = α₁/t₁,
-α₂/t₂ ...` with the *telescoping* property that the variables of `tᵢ`
-should only be from the set `αᵢ₊₁ …` which makes the types `τⱼ[𝒮]` and
-`τⱼ'[𝒮]` are identical. The substitution thus *solves* all the
-constraints. We call such a telescoping substitutions a
-*unifier*. Notice that this is a list and not just a set as the order
-of the elements ensures that there is no circularity in the
-definition.
+α₂/t₂ ...` such that:
+
+1. Should have the *telescoping* property, i.e.  the variables of `tᵢ`
+   should only be from the set `αᵢ₊₁ …`.
+
+2. Should makes the types `τⱼ[𝒮]` and `τⱼ'[𝒮]` identical, i.e. the
+substitution should *unify* `τⱼ` with `τⱼ'` for all `j`*simultaneously*.
+
+We call such a telescoping substitutions a *unifier*. The *unifier* is
+not merely a set but a list because the telescoping property depends
+on the order of the elements.
+
+
+The telescoping property of the substitution ensures that there is no
+circularity as the following exercise points out.
 
 __Exercise:__
-
 :   Let `𝒮` be a telescope and let `τ` be any type then the result
 `τ[𝒮]` of the substitution of `𝒮` in `τ` *does not* contain any type
 variable `α` such that `α/t` is an entry in  `𝒮`.
