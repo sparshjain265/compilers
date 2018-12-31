@@ -54,7 +54,14 @@ fun runWithLexer lexer = let fun loop stack = case lexer () of
 			 end
 
 
-val _ = case CommandLine.arguments() of
-	    [] => runWithLexer interactive
-	 |  xs => (List.map (runWithLexer o lexfile) xs; ())
+val _ =  ( case CommandLine.arguments() of
+	       [] => runWithLexer interactive
+	    |  xs => (List.map (runWithLexer o lexfile) xs; ())
+	 )
+	 handle Machine.StackUnderflow s =>
+		( print "error: Stack underflow: " ;
+		  Machine.printstack s;
+		  OS.Process.exit OS.Process.failure
+		)
+
 end
