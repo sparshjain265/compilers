@@ -91,10 +91,10 @@ input to the [`mlyacc`][mlyacc] and [`mllex`][mllex] tool is source
 in the first reading.
 
 
-[ast]: <src/master/reverse-polish/ast.sml>
-[machine]: <src/master/reverse-polish/ast.sml>
-[translate]: <src/master/reverse-polish/ast.sml>
-[expr.grm]: <src/master/reverse-polish/expr.grm>
-[expr.lex]: <src/master/reverse-polish/expr.lex>
+[ast]: </src/master/reverse-polish/ast.sml>
+[machine]: </src/master/reverse-polish/ast.sml>
+[translate]: </src/master/reverse-polish/ast.sml>
+[expr.grm]: </src/master/reverse-polish/expr.grm>
+[expr.lex]: </src/master/reverse-polish/expr.lex>
 [mlyacc]: <http://mlton.org/MLYacc>
 [mllex]: <http://mlton.org/MLLex>
