@@ -85,9 +85,9 @@ the following design for the compiler:
    [`mllex`][mllex].
 
 The suggested reading order is therefore [`ast.sml`][ast],
-[`machine.sml`][machine] and [`translate.sml`][translate]. The actual
-input to the [`mlyacc`][mlyacc] and [`mllex`][mllex] tool is source
-[`expr.grm`][expr.grm] and [`expr.lex`][expr.lex] which you can skip
+[`machine.sml`][machine], and [`translate.sml`][translate]. The actual
+input to the [`mlyacc`][mlyacc] and [`mllex`][mllex] tool is files
+[`expr.grm`][expr.grm] and [`expr.lex`][expr.lex], which you can skip
 in the first reading.
 
 

@@ -15,8 +15,8 @@ language. Languages have two grammars
 The concrete syntax has stuff that is only required to disambiguation
 the strings. For example, we use parenthesis in the string `(2 + 3) *
 4` only to distinguish it from `2 + (3 * 4)`. If we are allowed to use
-trees, we can easily represent the above to expressions as the
-following trees.
+trees, the above two expressions can be represented as trees as
+show below.
 
 ```
 
@@ -35,10 +35,10 @@ following trees.
 ```
 
 Notice that here the tree structure completely specifies what the
-expression is without needing any parenthesis characters. Inside the
-compiler an input program is therefore represented using the abstract
-syntax in which case it is some times called the _abstract syntax
-tree_ (hence the name of the module).
+expression and no parenthesis is required for disambiguation. Inside
+the compiler an input program is therefore represented using the
+abstract syntax in which case it is some times called the _abstract
+syntax tree_ or AST for short and hence the name of the module.
 
 The advantage of Standard ML for writing compilers starts showing
 itself right away: It almost seems that algebraic data types are
@@ -60,8 +60,9 @@ The process of converting the input program, which is a string, to the
 abstract syntax guided by the concrete syntax is called
 _parsing_. This module does not have the code for parsing our
 expression language. We use the mlyacc and mllex programs to write our
-expression parsers. See the expr.grm and expr.lex files in this
-repository for more details.
+expression parsers. You can have a look at the expr.grm and expr.lex
+files in this repository but it would be clear only after we have seen
+some bit of parsing theory. So you can skip it for time being.
 
 The rest of the module can be skipped for the first reading. Instead
 start reading the machine.sml where we describe the reverse polish
