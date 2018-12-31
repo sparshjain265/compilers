@@ -28,9 +28,8 @@ not want to discuss things like your grade.
 
 We have included some tests in the source files. You can run this
 using the the make command. This will ensure that you have setup your
-machine correctly with the correct softwares for this course. These
-tests are run by the [Shippable CI][shippable] every pushes into this
-repository.
+machine correctly with the correct software for this course.to this.
+
 
 ```
 make test   # run the tests on the sample programs here.
@@ -38,17 +37,21 @@ make clean  # cleanup the directories of temporary files.
 
 ```
 
-The [shippable builds][shippable] are run on a docker container which
-is build out of the Dockerfile given in this directory.
+## Continuous Build system.
+
+We have setup a [_continuous integration system_ at
+Shippable][shippable] where the above tests are run for every pushes
+or pull requests into this repository. The [shippable
+builds][shippable] are run on a docker container which is build out of
+the [Dockerfile][dockerfile] given in this directory.
 
 
 ## Other resources.
 
-There is a [`Dockerfile`][dockerfile] in this repository which gives
-the latest ubuntu with all the necessary tools for this course. It is
-also use by our shippable builds. Images are available at dockerhub
+If you are familiar with Docker you can use the docker instance built
+using the [`Dockerfile`][dockerfile] in this repository to try out the
+code samples in this repository. Images are available at dockerhub
 under the url <https://hub.docker.com/r/piyushkurur/compilers/>
-
 
 
 [status]: <https://api.shippable.com/projects/59800285202dac07006dad2e/badge?branch=master> "Build Status"
