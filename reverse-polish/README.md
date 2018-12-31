@@ -65,28 +65,36 @@ The above program prints 42 (because of the `p`) followed by `[42]`
 
 ## How to read the source code ?
 
-The compiler is spread across three structures namely `Ast`,
-`Machine`, and `Translate`. The are available in the files `ast.sml`,
-`machine.sml`, and `translate.sml` respectively. Concentrate on the
-following datatypes and values.
+A compiler is just a translator from a source language, the
+_expression language_ in our case, to a target language, the "machine
+language" associated with the _reverse polish_ machine. We recommend
+the following design for the compiler:
 
-The data type `Ast.Expr`
-:  Models the abstract syntax tree for the expression. This should be
-   thought of as the high level language represented inside the sml
-   language. The expression program is just `Ast.Expr list`
+1. Capture the source and target language using their respective
+   _abstract syntax tree_ (AST for short). In our case the
+   [`Ast.Expr`][ast] and the [Machine.Program][machine] types
+   available inside the files [ast.sml][ast] and
+   [machine.sml][machine] captures them respectively.
 
-The data type `Machine.Inst`.
-:    Models instructions to the RPN machine. A program to the RPN
-	 machine is modelled by `Machine.Program` which is just
-	 `Machine.Inst list`.
+2. The core of the compiler is then written as a function form the
+   source AST to the target AST. In our case this is available in the
+   [translate.sml][translate] file.
 
-The `Translate.compile`
-:    This function compiles the high level language of expression
-     program (modelled by `Ast.Expr list`) into a RPN-program
-     (modelled by `Machine.Program`)
+3. For the actual parser, which just parses the source program and
+   builds the AST, use tools like [`mlyacc`][mlyacc] and
+   [`mllex`][mllex].
+
+The suggested reading order is therefore [`ast.sml`][ast],
+[`machine.sml`][machine] and [`translate.sml`][translate]. The actual
+input to the [`mlyacc`][mlyacc] and [`mllex`][mllex] tool is source
+[`expr.grm`][expr.grm] and [`expr.lex`][expr.lex] which you can skip
+in the first reading.
 
 
-The parsing phase of the compiler is built using `mlyacc` and
-`mllex`. Have a look at `expr.grm` and `expr.lex` for the grammar and
-lexer definitions. We have tried to comment the sample code
-extensively so that it is easy to follow.
+[ast]: <src/master/reverse-polish/ast.sml>
+[machine]: <src/master/reverse-polish/ast.sml>
+[translate]: <src/master/reverse-polish/ast.sml>
+[expr.grm]: <src/master/reverse-polish/expr.grm>
+[expr.lex]: <src/master/reverse-polish/expr.lex>
+[mlyacc]: <http://mlton.org/MLYacc>
+[mllex]: <http://mlton.org/MLLex>
