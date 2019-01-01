@@ -59,4 +59,4 @@ under the url <https://hub.docker.com/r/piyushkurur/compilers/>
 [Course Wiki]:       <https://bitbucket.org/piyush-kurur/compilers/wiki/Home>
 [Issue tracker]:     <https://bitbucket.org/piyush-kurur/compilers/issues>
 [shippable]: <https://app.shippable.com/bitbucket/piyush-kurur/compilers/> "Shippable CI page"
-[dockerfile]: <https://bitbucket.org/piyush-kurur/compilers/src/master/Dockerfile>
+[dockerfile]: <Dockerfile>
