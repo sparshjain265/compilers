@@ -21,6 +21,7 @@ it is empty *)
        | EXPS    of Ast.Expr list
        | PROGRAM of Ast.Expr list
 
+%noshift EOF
 (*
 
 Operator precedence and associativity. The %left says the operator is
