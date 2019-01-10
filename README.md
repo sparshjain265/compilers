@@ -19,6 +19,8 @@ Some important links
 
 * [Issue tracker]
 
+* [Lab problems](lab)
+
 For any problems regarding the course please use the issue
 tracker. Remember that the issue tracker is public and any one can see
 the discussions therein. This has privacy implications and you might
