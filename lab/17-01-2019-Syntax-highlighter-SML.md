@@ -23,9 +23,10 @@ comments etc and print it on the terminal.
    the Wikipedia entry for [ANSI escape code][ansi-codes]
 
 The lexical grammar for SML is given in
-https://people.mpi-sws.org/~rossberg/sml.html. You can start with a
-small subset of it and build on it. Also for time being you can assume
-no nested comments are allowed (What would happend if we allow it?)
+<https://people.mpi-sws.org/~rossberg/sml.html>. You can start with a
+small subset of it and extend it slowly. Also for time being you can
+assume no nested comments are allowed (What would happend if we allow
+it?)
 
 
 [sgr]: <https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters>
