@@ -1,14 +1,14 @@
-# A terminal syntax high lighter for Standard ML.
+# A terminal syntax high lighter for the Tiger Language.
 
 In this assignment, you will be designing a syntax highlighter for
-SML.  The task is the following: Your input is a sml program and you
+Tiger.  The task is the following: Your input is a sml program and you
 need to highlight the different tokens in the program, like keyword,
 comments etc and print it on the terminal.
 
 
-1. Write a data type `Token` for tokens in SML.
+1. Write a data type `Token` for tokens in Tiger.
 
-2. Using `ml-lex` write a lexer for SML that returns the tokens. Be
+2. Using `ml-lex` write a lexer for Tiger that returns the tokens. Be
    careful to have a way to preserve spaces. The best way is for your
    lexer to return a tuple of `Token * position` where position itself
    is `line * column`
@@ -22,11 +22,12 @@ comments etc and print it on the terminal.
    character. See the section on [Select Graphic Rendition][sgr] in
    the Wikipedia entry for [ANSI escape code][ansi-codes]
 
-The lexical grammar for SML is given in
-<https://people.mpi-sws.org/~rossberg/sml.html>. You can start with a
-small subset of it and extend it slowly. Also for time being you can
-assume no nested comments are allowed (What would happend if we allow
-it?)
+Appel's book has the description of the language in the appendix. But
+you can also use the following source (note that they are not the
+same) https://www.lrde.epita.fr/~tiger/tiger.html. You can start with
+a small subset of it and extend it slowly. Also you only have to worry
+about the lexical stage here.
+
 
 
 [sgr]: <https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters>
