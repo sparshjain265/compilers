@@ -37,3 +37,4 @@ given below for ensuring easy evaluation of your lab assignments.
 
 1. [Extending the reverse polish language](10-01-2019-Extending-RP.md)
 2. [Syntax highlighter for sml](17-01-2019-Syntax-highlighter-SML.md)
+3. [Computing First and Folllow](31-01-2019-First-and-Follow.md)
