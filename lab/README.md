@@ -31,6 +31,10 @@ given below for ensuring easy evaluation of your lab assignments.
 
 6. Push your changes to bitbucket and inform the TA when you are done.
 
+7. You do not have to explicitly submit the assignments, just ensure
+   that your submission related work is merged to your `master` branch
+   and pushed to your bitbucket account.
+
 # Our workflow.
 
 We have a private repository on bitbucket where each of your
