@@ -35,7 +35,7 @@ given below for ensuring easy evaluation of your lab assignments.
    that your submission related work is merged to your `master` branch
    and pushed to your bitbucket account.
 
-# Our workflow.
+## Our workflow.
 
 We have a private repository on bitbucket where each of your
 repositories are [submodules]. At the end of each deadline, we update
@@ -43,7 +43,7 @@ the submodules thereby getting all your assignments in one go. So if
 you have missed on some commits, all you need to do is push them to
 your repository and inform the TA.
 
-# List of assignments for Jan-2019 session.
+## List of assignments for Jan-2019 session.
 
 1. [Extending the reverse polish language](10-01-2019-Extending-RP.md)
 2. [Syntax highlighter for sml](17-01-2019-Syntax-highlighter-SML.md)
