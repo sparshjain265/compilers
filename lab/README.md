@@ -48,5 +48,5 @@ your repository and inform the TA.
 1. [Extending the reverse polish language](10-01-2019-Extending-RP.md)
 2. [Syntax highlighter for sml](17-01-2019-Syntax-highlighter-SML.md)
 3. [Computing First and Folllow](31-01-2019-First-and-Follow.md)
-
+4. [Computing LL(1) parsing tables](07-02-2019-Computing-LL-1-Parsing-Tables.md)
 [submodules]: <https://git-scm.com/book/en/v2/Git-Tools-Submodules>
