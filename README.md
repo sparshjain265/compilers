@@ -1,5 +1,7 @@
 # Course on Compiler Design.
 
+Course repository forked during compilers course. Contents in this are by instructors of the course. 
+
 [![Build Status][status]](https://app.shippable.com/bitbucket/piyush-kurur/compilers)
 
 This is the repository for the first course on compiler construction
